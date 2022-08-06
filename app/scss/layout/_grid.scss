@@ -1,5 +1,9 @@
 @use '../util' as u;
 
+%widget {
+    padding: u.rem(16); // Placeholder
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -23,10 +27,20 @@
     }
 
     &__sidebar {
-        background-color: hsl(300, 100%, 30%);
-
         @include u.breakpoint-down(medium) {
             text-align: center;
+        }
+    }
+
+    &__widget {
+        // $widget: &;  Used for Interpolation
+        &--magenta {
+            @extend %widget;
+            background-color: hsl(300, 100%, 30%);
+        }
+        &--green {
+            @extend %widget; // #{$widget} Interpolation: Load the value of a variable in a Sass selector name
+            background-color: green;
         }
     }
 }
