@@ -1,8 +1,8 @@
 @use '../util' as u;
 
-%widget {
+/* %widget {
     padding: u.rem(16); // Placeholder
-}
+} */
 
 .grid {
     display: grid;
@@ -33,14 +33,15 @@
     }
 
     &__widget {
+        padding: u.rem(16);
         // $widget: &;  Used for Interpolation
-        &--magenta {
+        /* &--magenta {
             @extend %widget;
             background-color: hsl(300, 100%, 30%);
         }
         &--green {
-            @extend %widget; // #{$widget} Interpolation: Load the value of a variable in a Sass selector name
+            @extend %widget; // Interpolation: Load the value of a variable in a Sass selector name
             background-color: green;
-        }
+        } */
     }
 }

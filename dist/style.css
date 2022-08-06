@@ -57,10 +57,17 @@ a:active {
   --text-color:hsl(0, 0%, 100%);
 }
 
-.grid__widget--green, .grid__widget--magenta {
-  padding: 1rem;
+.magenta {
+  background-color: hsl(300deg, 100%, 30%);
 }
 
+.green {
+  background-color: green;
+}
+
+/* %widget {
+    padding: u.rem(16); // Placeholder
+} */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -86,9 +93,14 @@ a:active {
     text-align: center;
   }
 }
-.grid__widget--magenta {
-  background-color: hsl(300deg, 100%, 30%);
-}
-.grid__widget--green {
-  background-color: green;
+.grid__widget {
+  padding: 1rem;
+  /* &--magenta {
+      @extend %widget;
+      background-color: hsl(300, 100%, 30%);
+  }
+  &--green {
+      @extend %widget; // Interpolation: Load the value of a variable in a Sass selector name
+      background-color: green;
+  } */
 }/*# sourceMappingURL=style.css.map */
